@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .bg-img {
+            background-image: url("Background1.jpg");
+            min-height: 100vh;
+            align-items: center;
+
+        }
+        div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+
+        * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+        * {box-sizing: border-box;}
+
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #navbar {
+          overflow: hidden;
+          background-color: #f1f1f1;
+          padding: 50px 10px;
+          transition: 0.4s;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 99;
+        }
+
+        #navbar a {
+          float: left;
+          color: black;
+          text-align: center;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px;
+          line-height: 25px;
+          border-radius: 4px;
+        }
+
+        #navbar #logo {
+          font-size: 35px;
+          font-weight: bold;
+          transition: 0.4s;
+        }
+
+        #navbar a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        #navbar a.active {
+          background-color: dodgerblue;
+          color: white;
+        }
+
+        #navbar-right {
+          float: right;
+        }
+
+        @media screen and (max-width: 480px) {
+          #navbar {
+            padding: 20px 10px !important;
+          }
+          #navbar a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          #navbar-right {
+            float: none;
+          }
+        }
+        div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #04AA6D;
+}
+   h1 {text-align: center;}
+
+    </style>
+</head>
+<body>
+<div class="bg-img">
+    <h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="home1.jpg" style="width:100%">
+        <div class="text">Rent/Hire from the largest collection of flagship JDM cars</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="home2.jpg" style="width:100%">
+        <div class="text">Drive generations of GTR`s at the mountin passes of Romania</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="home3.jpg" style="width:100%">
+        <div class="text">Experience the power of the classic or the new sportcar experimental NSX</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="home4.jpg" style="width:100%">
+        <div class="text">Be the driver of the JDM icons</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="home5.jpg" style="width:100%">
+        <div class="text">Open 7 days a week</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="home6.jpg" style="width:100%">
+        <div class="text">Experience the joy of driving int the touge</div>
+    </div>
+
+
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+
+<div id="navbar">
+    <img src="logo.jpg" alt="Avatar" style="width:120px">
+    <div id="navbar-right">
+        <a class="active" href="main%20page.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="checkout.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </div>
+</div>
+<div class="success">
+    <h1></h1><p><strong> THE ULTIMATE JDM DRIVING EXPERIENCE IN JAPAN
+        NsAutomotive is the original JDM sports car entertainment company near Cluj Napoca.
+        Conveniently located at a gateway to the greatest touges (mountain passes) in Romania,
+        we offer the largest fleet of JDM sports cars from NISSAN Skyline GT-R, HONDA NSX,TOYOTA Supra,MITSUBISHI Lancer Evolution. Whichever sports/super car you choose, experience it on a variety of touges in Transyvania,
+        a mecca of car enthusiasts in Romania, while enjoying the stunning scenery of Mount Faget, landscapes, lakes, etc.</strong></p></h1>
+</div>
+    <div style="text-align:center">
+<h2>NsAutomotive Fleet</h2>
+    </div>
+<div class="responsive">
+    <div class="gallery">
+        <a target="_blank" href="nissan.html">
+            <img src="Gtr1.jpg" alt="Gtr" width="600" height="400">
+        </a>
+        <div class="desc">Nissan Gtr R32 nismo</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+        <a target="_blank" href="supra.html">
+            <img src="supra1.jpg" alt="Supra mk4" width="600" height="400">
+        </a>
+        <div class="desc">Toyota supra mk4 A80</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <a target="_blank" href="honda.html">
+            <img src="Nsx1.jpg" alt="Honda Nsx" width="600" height="400">
+        </a>
+        <div class="desc">Honda Nsx Type-R</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <a target="_blank" href="porsche.html">
+            <img src="prs.jpg" alt="Porsche" width="600" height="400">
+        </a>
+        <div class="desc">Porsche 911 TurboII 964</div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+    <div style="text-align:center">
+        <h2>Locations</h2>
+    </div>
+    <p>FROM ABOVE, IT LOOKS LIKE EVERY GREAT CORNER, FROM EVERY GREAT RACE TRACK IN THE WORLD HAS BEEN KNITTED TOGETHER TO CREATE ONE UNBROKEN GREY RIBBON OF AUTOMOTIVE PERFECTION</p>
+
+    <div class="scroll-container">
+        <img src="Transfagarasan.png" alt="Cinque Terre" width="600" height="400">
+        <img src="Transalpina.png" alt="Forest" width="600" height="400">
+        <img src="Transbucegi.png" alt="Northern Lights" width="600" height="400">
+        <img src="TransRarau.jpg" alt="Mountains" width="600" height="400">
+    </div>
+
+</div>
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FBest-Motoring-100079689974966%2F&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<iframe width="1000" height="500" src="https://www.youtube.com/embed/47Jo7ns1uU8?si=bgsxhVO6oVkPYNgC&autostart" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "20px 10px";
+        document.getElementById("logo").style.fontSize = "15px";
+      } else {
+        document.getElementById("navbar").style.padding = "40px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+      }
+    }
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+</div>
+</body>
+</html>
